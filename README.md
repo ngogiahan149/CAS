@@ -1,5 +1,5 @@
 # CAS
-Master's thesis: Leverage Large Language Models for Implicit Constrained Data Augmentation with Semantic Enrichment in Biomedical Relation Extraction
+Leverage Large Language Models for Implicit Constrained Data Augmentation with Semantic Enrichment in Biomedical Relation Extraction
 ## Biomedical Relation Extraction
 ### Fine-tuning RE model
 ```
