@@ -98,8 +98,7 @@ bash multipl-e.sh
 ```
 # Mathematics Reasoning
 ```
-#!/bin/bash
-accelerate launch  main.py \
+accelerate launch main.py \
   --model checkpoint-800 \
   --max_length_generation 2048 \
   --tasks pal-gsm8k-greedy \
