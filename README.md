@@ -52,7 +52,7 @@ deepspeed finetune_deepseekcoder.py \
 ```
 cd bigcode-evaluation-harness
 ```
-#### Humaneval
+#### Humaneval (Python)
 ```
 accelerate launch main.py \
   --model deepseek-ai/deepseek-coder-1.3b-instruct \
@@ -71,11 +71,43 @@ or
 ```
 bash humaneval.sh
 ```
-#### MultiPL-E
-Change the tasks multiple-[lang] with lang = ["cpp", "cs", "d", "go", "java", "jl" (Julia), "js", "lua", "php", "pl", "py", "r", 
-    "rb", "rkt", "rs", "scala", "sh", "swift", "ts"]
+#### MultiPL-E (Java, JavaScript, C++, Bash, Rust)
+Change the tasks multiple-[lang] with lang = ["cpp", "cs", "d", "go", "java", "jl" (Julia), "js", "lua", "php", "pl", "py", "r", "rb", "rkt", "rs", "scala", "sh", "swift", "ts"]
 ```
-
+accelerate launch main.py \
+  --model deepseek-ai/deepseek-coder-1.3b-instruct \
+  --max_length_generation 650 \
+  --tasks multiple-cpp \
+  --temperature 0.2 \
+  --n_samples 1 \
+  --batch_size 3 \
+  --load_in_4bit \
+  --save_generations \
+  --save_generations_path output/code/deepseek-coder-1.3b-instruct.json \
+  --generation_only \
+  --allow_code_execution
+```
+or
+```
+bash multipl-e.sh
 ```
 ## Mathematics Reasoning
+```
+#!/bin/bash
+accelerate launch  main.py \
+  --model checkpoint-800 \
+  --max_length_generation 2048 \
+  --tasks pal-gsm8k-greedy \
+  --n_samples 1 \
+  --batch_size 1 \
+  --do_sample False \
+  --metric_output_path output/metric/cp800-gsm8k.json \
+  --save_generations \
+  --save_generations_path output/code/cp800-gsm8k-output.json \
+  --allow_code_execution
+```
+or 
+```
+bash pal-gsm8k.sh
+```
 ## Information Retrieval
