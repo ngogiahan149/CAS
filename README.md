@@ -5,7 +5,7 @@ Table of Contents
 * [Code Completion](#code-completion)
 * [Mathematics Reasoning](#mathematics-reasoning)
 * [Information Retrieval](#information-retrieval)
-
+* [OpenChat-3.5](#openchat-3.5)
 # Biomedical Relation Extraction
 ## Fine-tuning RE model
 ```
