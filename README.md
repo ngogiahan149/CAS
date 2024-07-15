@@ -5,7 +5,7 @@ Table of Contents
 * [Code Completion](#code-completion)
 * [Mathematics Reasoning](#mathematics-reasoning)
 * [Information Retrieval](#information-retrieval)
-* [OpenChat 3.5](#openchat-3.5)
+* [OpenChat](#openchat)
 # Biomedical Relation Extraction
 ## Fine-tuning RE model
 ```
@@ -167,8 +167,8 @@ python eval.py \
 --predset_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
 --metric_name "em"
 ```
-# OpenChat 3.5
-This model is used for both ConstrainedA and SemQ Filter. The result data for the above 3 tasks already included; however, if you want to further apply to other tasks, run:
+# OpenChat
+This model is used for both ConstrainedA and SemQ Filter. The result data for the above 3 tasks is already included; however, if you want to further apply CAS to other tasks for new ICData augmentation, run:
 ```
 cd openchat
 ```
