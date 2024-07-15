@@ -16,10 +16,12 @@ python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_r
 Details performance in the result/result_leaderboard.txt file is calculated by the Leaderboard of BioCreative VIII BioRED Track Subtask 1 Challenge
 ## Code Completion 
 ```
+cd fine-tune
+
 DATA_PATH="evolinstruct_aug.json"
 OUTPUT_PATH="finetuned_model"
 MODEL_PATH="deepseek-ai/deepseek-coder-1.3b-instruct"
-cd finetune
+
 deepspeed finetune_deepseekcoder.py \
     --model_name_or_path $MODEL_PATH \
     --data_path $DATA_PATH \
