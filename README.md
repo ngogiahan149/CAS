@@ -97,10 +97,20 @@ or
 ```
 bash multipl-e.sh
 ```
-For some languages, if it is not able to run due to some missing packages of that language, then:
+For some languages, if it is not able to run due to some missing packages of that language, then use the docker instead:
 ```
 $ docker pull ghcr.io/bigcode-project/evaluation-harness-multiple
 $ docker tag ghcr.io/bigcode-project/evaluation-harness-multiple evaluation-harness-multiple
+```
+
+```
+$ sudo docker run -v $(pwd)/generations_py.json:/app/generations_py.json:ro -it evaluation-harness-multiple python3 main.py \
+    --model <MODEL_NAME> \
+    --tasks multiple-cpp \
+    --load_generations_path /app/generations_py.json \
+    --allow_code_execution  \
+    --temperature 0.8 \
+    --n_samples 1
 ```
 # Mathematics Reasoning
 ```
