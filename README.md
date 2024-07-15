@@ -20,8 +20,8 @@ python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_r
 ```
 Details performance in the result/result_leaderboard.txt file is calculated by the Leaderboard of BioCreative VIII BioRED Track Subtask 1 Challenge
 # Code Completion 
-## Fine-tuning process
 > Python 3.10.13
+## Fine-tuning process
 Go to "finetune" folder
 ```
 cd finetune
@@ -97,6 +97,11 @@ or
 ```
 bash multipl-e.sh
 ```
+For some languages, if it is not able to run due to some missing packages of that language, then:
+```
+$ docker pull ghcr.io/bigcode-project/evaluation-harness-multiple
+$ docker tag ghcr.io/bigcode-project/evaluation-harness-multiple evaluation-harness-multiple
+```
 # Mathematics Reasoning
 ```
 accelerate launch main.py \
@@ -116,7 +121,8 @@ or
 bash pal-gsm8k.sh
 ```
 # Information Retrieval
-Python 3.10.14
+> Python 3.10.14
+
 ## LoRA fine-tuning the models
 Dataset
 * train_em_top1.jsonl: original data
