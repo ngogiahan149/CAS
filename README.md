@@ -76,7 +76,7 @@ or
 ```
 bash humaneval.sh
 ```
-### MultiPL-E (Java, JavaScript, C++, Bash, Rust)
+### MultiPL-E (Java, JavaScript, C++, Bash, Rust, R)
 Change the tasks multiple-[lang] with lang = ["cpp", "cs", "d", "go", "java", "jl" (Julia), "js", "lua", "php", "pl", "py", "r", "rb", "rkt", "rs", "scala", "sh", "swift", "ts"]
 ```
 accelerate launch main.py \
