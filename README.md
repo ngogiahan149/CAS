@@ -15,6 +15,7 @@ python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_r
 ```
 Details performance in the result/result_leaderboard.txt file is calculated by the Leaderboard of BioCreative VIII BioRED Track Subtask 1 Challenge
 ## Code Completion 
+### Fine-tuning process
 Go to "finetune" folder
 ```
 cd finetune
@@ -46,6 +47,35 @@ deepspeed finetune_deepseekcoder.py \
     --report_to "tensorboard" \
     --deepspeed configs/ds_config_zero3.json \
     --bf16 True \
+```
+### Evaluation process
+```
+cd bigcode-evaluation-harness
+```
+#### Humaneval
+```
+accelerate launch main.py \
+  --model deepseek-ai/deepseek-coder-1.3b-instruct \
+  --max_length_generation 512 \
+  --tasks humaneval \
+  --temperature 0.2 \
+  --n_samples 1 \
+  --batch_size 3 \
+  --load_in_4bit \
+  --save_generations \
+  --save_generations_path output/code/deepseek-coder-1.3b-instruct.json \
+  --metric_output_path output/metric/deepseek-coder-1.3b-instruct.json \
+  --allow_code_execution
+```
+or 
+```
+bash humaneval.sh
+```
+#### MultiPL-E
+Change the tasks multiple-[lang] with lang = ["cpp", "cs", "d", "go", "java", "jl" (Julia), "js", "lua", "php", "pl", "py", "r", 
+    "rb", "rkt", "rs", "scala", "sh", "swift", "ts"]
+```
+
 ```
 ## Mathematics Reasoning
 ## Information Retrieval
