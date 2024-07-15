@@ -111,3 +111,35 @@ or
 bash pal-gsm8k.sh
 ```
 ## Information Retrieval
+### LoRA fine-tuning the models
+Dataset
+* train_em_top1.jsonl: original data
+* train_em_top1_aug_ori(1).jsonl: original + augmentation data
+Model name
+* llama_lora
+* llama2_lora
+* gpt2_lora
+* gptj_lora
+* opt_lora
+```
+python train_llama.py \
+--train_data_path "./datasets/nq/xturing/mgen/train_em_top1_aug_ori(1).jsonl" \
+--output_dir "./saved_model_xturing/llama_aug(1)" \
+--num_train_epochs 3 \
+--model_name "llama_lora"
+```
+### Inference
+```
+python query_llama.py \
+--dataset_path "./datasets/nq/xturing/mgen/test_em_top1.jsonl" \
+--output_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
+--model_name "llama_lora" \
+--model_path "./saved_model_xturing/llama"
+```
+### Evaluate the performance
+```
+python eval.py \
+--dataset_path "./datasets/nq/base/test.json" \
+--predset_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
+--metric_name "em"
+```
