@@ -5,6 +5,7 @@ Table of Contents
 * [Code Completion](#code-completion)
 * [Mathematics Reasoning](#mathematics-reasoning)
 * [Information Retrieval](#information-retrieval)
+
 # Biomedical Relation Extraction
 ## Fine-tuning RE model
 ```
@@ -165,4 +166,21 @@ python eval.py \
 --dataset_path "./datasets/nq/base/test.json" \
 --predset_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
 --metric_name "em"
+```
+# OpenChat-3.5
+This model is used for both ConstrainedA and SemQ Filter. The result data for the above 3 tasks already included; however, if you want to further apply to other tasks, run:
+```
+cd openchat
+```
+Open a port for push request
+```
+python -m ochat.serving.openai_api_server --model openchat/openchat_3.5 --dtype="half" --host 127.0.0.1 --port 1888
+```
+Generate and evaluate data quality
+```
+python push_request.py
+```
+Filter those data with score > 4
+```
+python filter.py
 ```
