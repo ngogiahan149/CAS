@@ -15,5 +15,8 @@ python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_r
 ```
 Details performance in the result/result_leaderboard.txt file is calculated by the Leaderboard of BioCreative VIII BioRED Track Subtask 1 Challenge
 ## Code Completion 
+···
+bash configs/finetune.sh
+···
 ## Mathematics Reasoning
 ## Information Retrieval
