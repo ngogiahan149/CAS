@@ -109,7 +109,7 @@ $ sudo docker run -v $(pwd)/generations_py.json:/app/generations_py.json:ro -it 
     --tasks multiple-cpp \
     --load_generations_path /app/generations_py.json \
     --allow_code_execution  \
-    --temperature 0.8 \
+    --temperature 0.2 \
     --n_samples 1
 ```
 # Mathematics Reasoning
