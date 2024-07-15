@@ -19,7 +19,7 @@ Details performance in the result/result_leaderboard.txt file is calculated by t
 DATA_PATH="evolinstruct_aug.json"
 OUTPUT_PATH="finetuned_model"
 MODEL_PATH="deepseek-ai/deepseek-coder-1.3b-instruct"
-
+cd finetune
 deepspeed finetune_deepseekcoder.py \
     --model_name_or_path $MODEL_PATH \
     --data_path $DATA_PATH \
