@@ -68,6 +68,10 @@ deepspeed finetune_deepseekcoder.py \
 ```
 cd bigcode-evaluation-harness
 ```
+Login to hugging face first with your token:
+```
+huggingface-cli login --token <TOKEN>
+```
 ### Humaneval (Python)
 ```
 accelerate launch main.py \
