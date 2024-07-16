@@ -203,7 +203,8 @@ python eval.py \
 # OpenChat
 > Python 3.11.8
 
-> :warning: Must run in GPU
+> [!WARNING]
+> Must run in GPU
 
 This model is used for both ConstrainedA and SemQ Filter. The result data for the above 3 tasks is already included; however, if you want to further apply CAS to other tasks for new ICData augmentation, run:
 ```
