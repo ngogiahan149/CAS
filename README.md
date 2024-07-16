@@ -6,6 +6,8 @@ Table of Contents
 * [Mathematics Reasoning](#mathematics-reasoning)
 * [Information Retrieval](#information-retrieval)
 * [OpenChat](#openchat)
+# Dataset
+Training dataset available at hugging face (https://huggingface.co/datasets/ngogiahan/CAS)
 # Biomedical Relation Extraction
 ```
 cd BioRE
