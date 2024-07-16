@@ -7,7 +7,7 @@ Table of Contents
 * [Information Retrieval](#information-retrieval)
 * [OpenChat](#openchat)
 # Dataset
-Training dataset available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
+Training datasets available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
 # Biomedical Relation Extraction
 For already fine-tuned models:
 * [RE model](https://huggingface.co/ngogiahan/model_all)
