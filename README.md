@@ -93,6 +93,7 @@ bash humaneval.sh
 ```
 ### MultiPL-E (Java, JavaScript, C++, Bash, Rust, R)
 Change the tasks multiple-[lang] with lang = ["cpp", "cs", "d", "go", "java", "jl" (Julia), "js", "lua", "php", "pl", "py", "r", "rb", "rkt", "rs", "scala", "sh", "swift", "ts"]
+#### Inference
 ```
 accelerate launch main.py \
   --model deepseek-ai/deepseek-coder-1.3b-instruct \
@@ -110,6 +111,23 @@ accelerate launch main.py \
 or
 ```
 bash multipl-e.sh
+```
+#### Performance Evaluation
+```
+accelerate launch main.py \
+  --model <MODEL_PATH> \
+  --max_length_generation 650 \
+  --tasks multiple-sh \
+  --temperature 0.2 \
+  --n_samples 1 \
+  --batch_size 5 \
+  --load_in_4bit \
+  --load_generations_path <INPUTFILE> \
+  --allow_code_execution
+```
+or 
+```
+bash multipl-e-eval.sh
 ```
 For some languages, if it is not able to run due to some missing packages of that language, then use the docker instead:
 ```
