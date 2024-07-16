@@ -177,7 +177,7 @@ python query_llama.py \
 ```
 python eval.py \
 --dataset_path "./datasets/nq/base/test.json" \
---predset_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
+--predset_path "./output/nq/mgen/silver-em_tuned-llama2_aug(1).json" \
 --metric_name "em"
 ```
 # OpenChat
