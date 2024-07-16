@@ -167,6 +167,10 @@ bash pal-gsm8k.sh
 # Information Retrieval
 > Python 3.10.14
 
+For already fine-tuned models, find it in [hugging face](https://huggingface.co/ngogiahan/gpt2/tree/main). We provide three models:
+* Llama2-7B
+* GPT-2
+* GPT-J
 ## LoRA fine-tuning the models
 Dataset
 * train_em_top1.jsonl: original data
