@@ -191,7 +191,7 @@ cd openchat
 ```
 Open a port for push request
 ```
-python -m ochat.serving.openai_api_server --model openchat/openchat_3.5 --dtype="half" --host 127.0.0.1 --port 1888
+python -m ochat.serving.openai_api_server --model openchat/openchat-3.5-0106 --dtype="half" --host 127.0.0.1 --port 18888
 ```
 Generate and evaluate data quality
 ```
