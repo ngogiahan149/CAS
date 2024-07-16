@@ -113,7 +113,8 @@ or
 bash multipl-e.sh
 ```
 #### Performance Evaluation
-> [!NOTE]  Can run on CPU
+> [!NOTE]
+> Can run on CPU
 ```
 accelerate launch main.py \
   --model <MODEL_PATH> \
