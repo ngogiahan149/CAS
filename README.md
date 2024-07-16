@@ -182,5 +182,5 @@ python push_request.py
 ```
 Filter those data with score > 4
 ```
-python filter.py
+python filter.py --input_file <INPUTFILE> --output_file <OUTPUTFILE>
 ```
