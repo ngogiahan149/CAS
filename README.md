@@ -6,7 +6,16 @@ Table of Contents
 * [Mathematics Reasoning](#mathematics-reasoning)
 * [Information Retrieval](#information-retrieval)
 * [OpenChat](#openchat)
+# Dataset
+Training datasets available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
 # Biomedical Relation Extraction
+For already fine-tuned models:
+* [RE model](https://huggingface.co/ngogiahan/model_all)
+* [Novelty model](https://huggingface.co/ngogiahan/model_no_novel) (predict no/novel)
+* [Novelty model](https://huggingface.co/ngogiahan/model_no_none_novel) (predict no/none/novel for novelty, for those "none" prediction in Novelty, also updating "None“ for relation)
+```
+cd BioRE
+```
 ## Fine-tuning RE model
 ```
 python script.py train --mode biore --train_file dataset/train_test_aug2.csv --test_file test_transformers.csv
