@@ -7,8 +7,12 @@ Table of Contents
 * [Information Retrieval](#information-retrieval)
 * [OpenChat](#openchat)
 # Dataset
-Training dataset available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS)
+Training dataset available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
 # Biomedical Relation Extraction
+For already fine-tuned models:
+* [RE model](https://huggingface.co/ngogiahan/model_all)
+* [Novelty model](https://huggingface.co/ngogiahan/model_no_novel)(predict no/novel)
+* [Novelty model](https://huggingface.co/ngogiahan/model_no_none_novel)(predict no/none/novel for novelty, for those "none" prediction in Novelty, also updating "None“ for relation)
 ```
 cd BioRE
 ```
