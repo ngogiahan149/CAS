@@ -161,9 +161,9 @@ Model name
 ```
 python train_llama.py \
 --train_data_path "./datasets/nq/xturing/mgen/train_em_top1_aug_ori(1).jsonl" \
---output_dir "./saved_model_xturing/llama_aug(1)" \
+--output_dir "./saved_model_xturing/llama2_aug(1)" \
 --num_train_epochs 3 \
---model_name "llama_lora"
+--model_name "llama2_lora"
 ```
 ## Inference
 ```
