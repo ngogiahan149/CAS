@@ -170,8 +170,8 @@ python train_llama.py \
 python query_llama.py \
 --dataset_path "./datasets/nq/xturing/mgen/test_em_top1.jsonl" \
 --output_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
---model_name "llama_lora" \
---model_path "./saved_model_xturing/llama"
+--model_name "llama2_lora" \
+--model_path "./saved_model_xturing/llama2_aug"
 ```
 ## Evaluate the performance
 ```
