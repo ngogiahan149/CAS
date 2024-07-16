@@ -1,0 +1,16 @@
+1. Login to huggingface first before running sh file
+huggingface-cli login --token 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
+
+2. Run the corresponding sh file for each dataset
+HumanEval: bash humaneval.sh
+MBPP: bash mpbb.sh
+
+$ sudo docker run -v $(pwd)/generations_py.json:/app/generations_py.json:ro -it evaluation-harness-multiple python3 main.py \
+    --model <MODEL_NAME> \
+    --tasks multiple-cpp \
+    --save_generations \
+    --save_generations_path output/code/deepseek-coder-1.3b-instruct.json \
+    --load_generations_path output/code/deepseek-coder-1.3b-instruct.json \
+    --allow_code_execution  \
+    --temperature 0.2 \
+    --n_samples 1
