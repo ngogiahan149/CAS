@@ -7,6 +7,9 @@ Table of Contents
 * [Information Retrieval](#information-retrieval)
 * [OpenChat](#openchat)
 # Biomedical Relation Extraction
+```
+cd BioRE
+```
 ## Fine-tuning RE model
 ```
 python script.py train --mode biore --train_file dataset/train_test_aug2.csv --test_file test_transformers.csv
