@@ -18,7 +18,7 @@ cd BioRE
 ```
 ## Fine-tuning RE model
 ```
-python script.py train --mode biore --train_file dataset/train_test_aug2.csv --test_file test_transformers.csv
+python script.py train --mode biore --train_file dataset/train_test_aug2.csv --test_file dataset/test_transformers.csv
 ```
 ## Fine-tuning Novelty model
 ```
