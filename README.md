@@ -18,7 +18,7 @@ cd BioRE
 ```
 ## Fine-tuning RE model
 ```
-python script.py train --mode biore --train_file dataset/train_test_aug2.csv --test_file test_transformers.csv
+python script.py train --mode biore --train_file dataset/train_test_aug2.csv --test_file dataset/test_transformers.csv
 ```
 ## Fine-tuning Novelty model
 ```
@@ -68,6 +68,10 @@ deepspeed finetune_deepseekcoder.py \
 ```
 cd bigcode-evaluation-harness
 ```
+Login to hugging face first with your token:
+```
+huggingface-cli login --token <TOKEN>
+```
 ### Humaneval (Python)
 ```
 accelerate launch main.py \
@@ -89,6 +93,7 @@ bash humaneval.sh
 ```
 ### MultiPL-E (Java, JavaScript, C++, Bash, Rust, R)
 Change the tasks multiple-[lang] with lang = ["cpp", "cs", "d", "go", "java", "jl" (Julia), "js", "lua", "php", "pl", "py", "r", "rb", "rkt", "rs", "scala", "sh", "swift", "ts"]
+#### Inference
 ```
 accelerate launch main.py \
   --model deepseek-ai/deepseek-coder-1.3b-instruct \
@@ -106,6 +111,25 @@ accelerate launch main.py \
 or
 ```
 bash multipl-e.sh
+```
+#### Performance Evaluation
+> [!NOTE]
+> Can run on CPU
+```
+accelerate launch main.py \
+  --model <MODEL_PATH> \
+  --max_length_generation 650 \
+  --tasks multiple-sh \
+  --temperature 0.2 \
+  --n_samples 1 \
+  --batch_size 5 \
+  --load_in_4bit \
+  --load_generations_path <INPUTFILE> \
+  --allow_code_execution
+```
+or 
+```
+bash multipl-e-eval.sh
 ```
 For some languages, if it is not able to run due to some missing packages of that language, then use the docker instead:
 ```
@@ -143,6 +167,10 @@ bash pal-gsm8k.sh
 # Information Retrieval
 > Python 3.10.14
 
+For already fine-tuned models, find them in [hugging face](https://huggingface.co/ngogiahan/gpt2/tree/main). We provide three models:
+* Llama2-7B
+* GPT-2
+* GPT-J
 ## LoRA fine-tuning the models
 Dataset
 * train_em_top1.jsonl: original data
@@ -157,33 +185,38 @@ Model name
 ```
 python train_llama.py \
 --train_data_path "./datasets/nq/xturing/mgen/train_em_top1_aug_ori(1).jsonl" \
---output_dir "./saved_model_xturing/llama_aug(1)" \
+--output_dir "./saved_model_xturing/llama2_aug(1)" \
 --num_train_epochs 3 \
---model_name "llama_lora"
+--model_name "llama2_lora"
 ```
 ## Inference
 ```
 python query_llama.py \
 --dataset_path "./datasets/nq/xturing/mgen/test_em_top1.jsonl" \
 --output_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
---model_name "llama_lora" \
---model_path "./saved_model_xturing/llama"
+--model_name "llama2_lora" \
+--model_path "./saved_model_xturing/llama2_aug(1)"
 ```
 ## Evaluate the performance
 ```
 python eval.py \
 --dataset_path "./datasets/nq/base/test.json" \
---predset_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
+--predset_path "./output/nq/mgen/silver-em_tuned-llama2_aug(1).json" \
 --metric_name "em"
 ```
 # OpenChat
+> Python 3.11.8
+
+> [!WARNING]
+> Must run in GPU
+
 This model is used for both ConstrainedA and SemQ Filter. The result data for the above 3 tasks is already included; however, if you want to further apply CAS to other tasks for new ICData augmentation, run:
 ```
 cd openchat
 ```
 Open a port for push request
 ```
-python -m ochat.serving.openai_api_server --model openchat/openchat_3.5 --dtype="half" --host 127.0.0.1 --port 1888
+python -m ochat.serving.openai_api_server --model openchat/openchat-3.5-0106 --dtype="half" --host 127.0.0.1 --port 18888
 ```
 Generate and evaluate data quality
 ```
