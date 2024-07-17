@@ -21,7 +21,7 @@ from tqdm.auto import tqdm
 import argparse
 import torch
 import torch.nn as nn
-
+import sys
 # model
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import matplotlib.pyplot as plt
@@ -177,6 +177,7 @@ def transform_labels_stage7(label):
     return {'labels': num}
 def train(checkpoint, file, file_test, classes, stage):
      # start a new wandb run to track this script
+    print(sys.path)
     wandb.init(
     project="BioCreative-Transformer",
     config={
@@ -1226,7 +1227,7 @@ if __name__ == '__main__':
             path_novel=args.path_novel,
             df_eval=df_eval,
             relation_class=classes_all,
-            novel_class=classes_novelty6,
+            novel_class=classes_novelty5,
             relation_stage=4,
             novel_stage=5
         )
