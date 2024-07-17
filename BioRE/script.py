@@ -1195,7 +1195,7 @@ if __name__ == '__main__':
     classes_all = ['None', 'Association', 'Positive_Correlation', 'Negative_Correlation', 'Bind', 'Cotreatment', 'Comparison', 'Drug_Interaction', 'Conversion']  # stage 4
     classes_novelty5 = ['None', 'No', 'Novel']
     classes_novelty6 = ['No', 'Novel']
-
+    
     parser = argparse.ArgumentParser(description='Train or Evaluate models')
     subparsers = parser.add_subparsers(dest='command')
 

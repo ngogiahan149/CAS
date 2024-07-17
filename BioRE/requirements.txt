@@ -1,5 +1,9 @@
-evaluate
-transformers
-matplotlib
-wandb
-scikit-learn
+datasets==2.18.0
+evaluate==0.4.2
+matplotlib==3.9.1
+numpy==2.0.0
+pandas==2.2.2
+scikit_learn==1.5.1
+torch==2.1.2
+tqdm==4.66.2
+transformers==4.38.2

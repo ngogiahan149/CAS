@@ -1,0 +1,71 @@
+==========Overall (P/R/F)==========
+Entity pair:	0.852376137513/0.724849527085/0.783457249071
++Relation type:	0.700707785642/0.595872742906/0.644052044610
++Novelty:	0.614762386249/0.522785898538/0.565055762082
+
+==========Entity pair==========
+ChemicalEntity|ChemicalEntity:	0.877777777778/0.840425531915/0.858695652174
+ChemicalEntity|DiseaseOrPhenotypicFeature:	0.816091954023/0.751322751323/0.782369146006
+ChemicalEntity|GeneOrGeneProduct:	0.909090909091/0.810810810811/0.857142857143
+DiseaseOrPhenotypicFeature|GeneOrGeneProduct:	0.831325301205/0.701694915254/0.761029411765
+GeneOrGeneProduct|GeneOrGeneProduct:	0.907834101382/0.820833333333/0.862144420131
+ChemicalEntity|SequenceVariant:	0.800000000000/0.250000000000/0.380952380952
+DiseaseOrPhenotypicFeature|SequenceVariant:	0.824561403509/0.549707602339/0.659649122807
+
+==========+Relation type==========
+ChemicalEntity|ChemicalEntity:	0.611111111111/0.585106382979/0.597826086957
+ChemicalEntity|DiseaseOrPhenotypicFeature:	0.752873563218/0.693121693122/0.721763085399
+ChemicalEntity|GeneOrGeneProduct:	0.681818181818/0.608108108108/0.642857142857
+DiseaseOrPhenotypicFeature|GeneOrGeneProduct:	0.702811244980/0.593220338983/0.643382352941
+GeneOrGeneProduct|GeneOrGeneProduct:	0.801843317972/0.725000000000/0.761487964989
+ChemicalEntity|SequenceVariant:	0.200000000000/0.062500000000/0.095238095238
+DiseaseOrPhenotypicFeature|SequenceVariant:	0.587719298246/0.391812865497/0.470175438596
+
+==========+Novelty==========
+ChemicalEntity|ChemicalEntity:	0.577777777778/0.553191489362/0.565217391304
+ChemicalEntity|DiseaseOrPhenotypicFeature:	0.649425287356/0.597883597884/0.622589531680
+ChemicalEntity|GeneOrGeneProduct:	0.613636363636/0.547297297297/0.578571428571
+DiseaseOrPhenotypicFeature|GeneOrGeneProduct:	0.558232931727/0.471186440678/0.511029411765
+GeneOrGeneProduct|GeneOrGeneProduct:	0.728110599078/0.658333333333/0.691466083151
+ChemicalEntity|SequenceVariant:	0.200000000000/0.062500000000/0.095238095238
+DiseaseOrPhenotypicFeature|SequenceVariant:	0.561403508772/0.374269005848/0.449122807018
+
+==========+Relation type (Details)==========
+ChemicalEntity|ChemicalEntity|Association:	0.466666666667/0.280000000000/0.350000000000
+ChemicalEntity|ChemicalEntity|Comparison:	0.500000000000/0.166666666667/0.250000000000
+ChemicalEntity|ChemicalEntity|Conversion:	0.000000000000/0.000000000000/0.000000000000
+ChemicalEntity|ChemicalEntity|Cotreatment:	0.833333333333/0.454545454545/0.588235294118
+ChemicalEntity|ChemicalEntity|Drug_Interaction:	1.000000000000/0.500000000000/0.666666666667
+ChemicalEntity|ChemicalEntity|Positive_Correlation:	0.650000000000/0.684210526316/0.666666666667
+ChemicalEntity|ChemicalEntity|Negative_Correlation:	0.622222222222/0.933333333333/0.746666666667
+
+ChemicalEntity|DiseaseOrPhenotypicFeature|Association:	0.666666666667/0.320000000000/0.432432432432
+ChemicalEntity|DiseaseOrPhenotypicFeature|Positive_Correlation:	0.822916666667/0.759615384615/0.790000000000
+ChemicalEntity|DiseaseOrPhenotypicFeature|Negative_Correlation:	0.666666666667/0.733333333333/0.698412698413
+
+ChemicalEntity|GeneOrGeneProduct|Association:	0.511111111111/0.511111111111/0.511111111111
+ChemicalEntity|GeneOrGeneProduct|Bind:	0.250000000000/0.333333333333/0.285714285714
+ChemicalEntity|GeneOrGeneProduct|Cotreatment:	1.000000000000/1.000000000000/1.000000000000
+ChemicalEntity|GeneOrGeneProduct|Positive_Correlation:	0.783783783784/0.508771929825/0.617021276596
+ChemicalEntity|GeneOrGeneProduct|Negative_Correlation:	0.846153846154/0.891891891892/0.868421052632
+
+DiseaseOrPhenotypicFeature|GeneOrGeneProduct|Association:	0.798029556650/0.623076923077/0.699784017279
+DiseaseOrPhenotypicFeature|GeneOrGeneProduct|Bind:	0.000000000000/0.000000000000/0.000000000000
+DiseaseOrPhenotypicFeature|GeneOrGeneProduct|Conversion:	0.000000000000/0.000000000000/0.000000000000
+DiseaseOrPhenotypicFeature|GeneOrGeneProduct|Positive_Correlation:	0.285714285714/0.210526315789/0.242424242424
+DiseaseOrPhenotypicFeature|GeneOrGeneProduct|Negative_Correlation:	0.473684210526/0.562500000000/0.514285714286
+
+GeneOrGeneProduct|GeneOrGeneProduct|Association:	0.855769230769/0.631205673759/0.726530612245
+GeneOrGeneProduct|GeneOrGeneProduct|Bind:	0.285714285714/0.666666666667/0.400000000000
+GeneOrGeneProduct|GeneOrGeneProduct|Positive_Correlation:	0.820512820513/0.888888888889/0.853333333333
+GeneOrGeneProduct|GeneOrGeneProduct|Negative_Correlation:	0.678571428571/0.791666666667/0.730769230769
+
+ChemicalEntity|SequenceVariant|Association:	0.000000000000/0.000000000000/0.000000000000
+ChemicalEntity|SequenceVariant|Bind:	0.000000000000/0.000000000000/0.000000000000
+ChemicalEntity|SequenceVariant|Positive_Correlation:	0.333333333333/0.333333333333/0.333333333333
+ChemicalEntity|SequenceVariant|Negative_Correlation:	0.000000000000/0.000000000000/0.000000000000
+
+DiseaseOrPhenotypicFeature|SequenceVariant|Association:	0.700000000000/0.294117647059/0.414201183432
+DiseaseOrPhenotypicFeature|SequenceVariant|Positive_Correlation:	0.492063492063/0.607843137255/0.543859649123
+DiseaseOrPhenotypicFeature|SequenceVariant|Negative_Correlation:	1.000000000000/1.000000000000/1.000000000000
+
