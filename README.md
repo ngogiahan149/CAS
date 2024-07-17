@@ -9,6 +9,8 @@ Table of Contents
 # Dataset
 Training datasets available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
 # Biomedical Relation Extraction
+> Python 3.8
+
 For already fine-tuned models:
 * [RE model](https://huggingface.co/ngogiahan/model_all)
 * [Novelty model](https://huggingface.co/ngogiahan/model_no_novel) (predict no/novel)
