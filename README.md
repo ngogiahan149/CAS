@@ -229,15 +229,7 @@ Filter those data with score > 4
 python filter.py --input_file <INPUTFILE> --output_file <OUTPUTFILE>
 ```
 # References
-@misc{bigcode-evaluation-harness,
-  author       = {Ben Allal, Loubna and
-                  Muennighoff, Niklas and
-                  Kumar Umapathi, Logesh and
-                  Lipkin, Ben and
-                  von Werra, Leandro},
-  title = {A framework for the evaluation of code generation models},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/bigcode-project/bigcode-evaluation-harness}},
-  year = 2022,
-}
+* [OpenChat](https://github.com/imoneoi/openchat)
+* [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness)
+* [Filco](https://github.com/zorazrw/filco)
+
