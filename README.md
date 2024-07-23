@@ -1,4 +1,4 @@
-# Leverage Large Language Models for Implicit Constrained Data Augmentation with Semantic Enrichment in Biomedical Relation Extraction
+# CAS: Enhancing Implicit Constrained Data Augmentation with Semantic Enrichment for Biomedical Relation Extraction
 Table of Contents
 =================
 * [Biomedical Relation Extraction](#biomedical-relation-extraction)
