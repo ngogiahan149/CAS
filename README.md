@@ -8,6 +8,7 @@ Table of Contents
 * [OpenChat](#openchat)
 # Dataset
 Training datasets are available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
+Download datasets and put them in the folder "dataset/" before running the script below
 # Biomedical Relation Extraction
 > Python 3.8
 
@@ -18,7 +19,6 @@ For already fine-tuned models:
 ```
 cd BioRE
 ```
-Download datasets and put them in the folder "dataset/" before running the script below
 ## Fine-tuning RE model
 ```
 python script.py train --mode biore --train_file dataset/train_test_aug2.csv --test_file dataset/test_transformers.csv
