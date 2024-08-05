@@ -18,6 +18,7 @@ For already fine-tuned models:
 ```
 cd BioRE
 ```
+Download datasets and put in folder "dataset/" before running the script below
 ## Fine-tuning RE model
 ```
 python script.py train --mode biore --train_file dataset/train_test_aug2.csv --test_file dataset/test_transformers.csv
