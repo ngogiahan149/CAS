@@ -7,8 +7,8 @@ Table of Contents
 * [Information Retrieval](#information-retrieval)
 * [OpenChat](#openchat)
 # Dataset
-Training datasets are available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
-Download datasets and put them in the folder "dataset/" before running the script below
+* Training datasets are available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
+* Download datasets and put them in the folder "dataset/" before running the script below
 # Biomedical Relation Extraction
 > Python 3.8
 
