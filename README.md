@@ -187,7 +187,7 @@ Model name
 * opt_lora
 ```
 python train_llama.py \
---train_data_path "./datasets/nq/xturing/mgen/train_em_top1_aug_ori(1).jsonl" \
+--train_data_path "mgen/train_em_top1_aug_ori(1).jsonl" \
 --output_dir "./saved_model_xturing/llama2_aug(1)" \
 --num_train_epochs 3 \
 --model_name "llama2_lora"
@@ -195,7 +195,7 @@ python train_llama.py \
 ## Inference
 ```
 python query_llama.py \
---dataset_path "./datasets/nq/xturing/mgen/test_em_top1.jsonl" \
+--dataset_path "mgen/test_em_top1.jsonl" \
 --output_path "./output/nq/mgen/silver-em_tuned-llama_aug(1).json" \
 --model_name "llama2_lora" \
 --model_path "./saved_model_xturing/llama2_aug(1)"
