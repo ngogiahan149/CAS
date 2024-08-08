@@ -8,6 +8,18 @@ Table of Contents
 * [OpenChat](#openchat)
 # Dataset
 * Training datasets are available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
+# YML Files
+We provide YML files for conda environment of different tasks:
+* Biomedical Relation Extraction: biore.yml
+* Code Completion Fine-Tuning: code-finetune.yml
+* Code Completion and Mathematics Evaluation: code-evaluate.yml
+* Information Retrieval: information-retrieval.yml
+* Openchat: openchat.yml
+CUDA version: 12.3
+```
+conda env create -f <YML file>
+```
+
 # Biomedical Relation Extraction
 > Python 3.9
 
