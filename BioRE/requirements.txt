@@ -1,7 +1,7 @@
 datasets==2.18.0
 evaluate==0.4.2
 matplotlib==3.9.1
-numpy==2.0.0
+numpy==1.26.4
 pandas==2.2.2
 scikit_learn==1.5.1
 torch==2.1.2
