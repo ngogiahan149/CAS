@@ -15,6 +15,7 @@ We also provide YML files for conda environment of different tasks:
 * Code Completion and Mathematics Evaluation: code-evaluate.yml
 * Information Retrieval: information-retrieval.yml
 * Openchat: openchat.yml
+
 CUDA version: 12.3
 ```
 conda env create -f <YML file>
