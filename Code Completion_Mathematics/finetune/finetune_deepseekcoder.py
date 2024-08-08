@@ -8,7 +8,6 @@ import torch.distributed
 import transformers
 from transformers import Trainer
 from datasets import load_dataset
-from petals import AutoDistributedModelForCausalLM
 from transformers.deepspeed import HfDeepSpeedConfig
 import deepspeed
 IGNORE_INDEX = -100
