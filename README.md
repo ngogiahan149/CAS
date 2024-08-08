@@ -72,6 +72,10 @@ deepspeed finetune_deepseekcoder.py \
     --deepspeed configs/ds_config_zero3.json \
     --bf16 True \
 ```
+or
+```
+bash finetune.sh
+```
 ## Evaluation process
 ```
 cd bigcode-evaluation-harness
