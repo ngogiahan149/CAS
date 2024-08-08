@@ -8,7 +8,7 @@ evaluate==0.4.2
 gensim==4.3.2
 jsonlines==4.0.0
 matplotlib==3.9.1
-numpy==2.0.0
+numpy==1.26.4
 openai==1.35.14
 pandas==2.2.2
 pandas_datareader==0.10.0
