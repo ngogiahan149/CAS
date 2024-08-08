@@ -10,7 +10,7 @@ Table of Contents
 * Training datasets are available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
 * Download datasets and put them in the folder "dataset/" before running the script below
 # Biomedical Relation Extraction
-> Python 3.8
+> Python 3.9
 
 For already fine-tuned models:
 * [RE model](https://huggingface.co/ngogiahan/model_all)
@@ -29,7 +29,7 @@ python script.py train --mode novelty --train_file dataset/train_original_large.
 ```
 ## Inference of both RE and Novelty
 ```
-python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_relation model_all --path_novel model_novelty_no_none_novel --output_file result/bc8_biored_task1_test-relation-no_none_novel-modelall.csv
+python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_relation ngogiahan/model_all --path_novel ngogiahan/model_no_none_novel --output_file result/bc8_biored_task1_test-relation-no_none_novel-modelall.csv
 ```
 Details performance in the result/result_leaderboard.txt file is calculated by the Leaderboard of BioCreative VIII BioRED Track Subtask 1 Challenge
 # Code Completion 
@@ -171,14 +171,14 @@ bash pal-gsm8k.sh
 ```
 # Information Retrieval
 > Python 3.10.14
-
 For already fine-tuned models, find them in [hugging face](https://huggingface.co/ngogiahan/ir-models/tree/main). We provide three models:
 * Llama2-7B
 * GPT-2
 * GPT-J
-\\ To download models quickly from hugging face, run:
+
+To download models quickly from hugging face, run:
 ```
-from huggingface_hub import hf_hub_download repo_id = "ngogiahan/ir-models" directory_name = "gpt2" hf_hub_download(repo_id=repo_id, filename=directory_name) 
+python download_hf_folder.py --repo_id ngogiahan/ir-models --folder_path <MODEL_NAME> --local_dir ./
 ```
 ## LoRA fine-tuning the models
 Dataset
