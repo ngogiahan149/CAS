@@ -29,6 +29,7 @@ python script.py train --mode biore --train_file dataset/train_test_aug2.csv --t
 python script.py train --mode novelty --train_file dataset/train_original_large.csv --test_file dataset/test.csv
 ```
 ## Inference of both RE and Novelty
+Input the RE model for --path_relation and Novelty model for --path_novel (direct repo id from hugging face can be used to input here)
 ```
 python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_relation ngogiahan/model_all --path_novel ngogiahan/model_no_none_novel --output_file result/bc8_biored_task1_test-relation-no_none_novel-modelall.csv
 ```
