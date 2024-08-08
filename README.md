@@ -33,8 +33,9 @@ python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_r
 ```
 Details performance in the result/result_leaderboard.txt file is calculated by the Leaderboard of BioCreative VIII BioRED Track Subtask 1 Challenge
 # Code Completion 
-> :warning: **Please ensure your CUDA version matching**: Be very careful here!
-> Python 3.10.13
+:warning: **Please ensure your CUDA version matching**: Be very careful here!
+
+\\> Python 3.10.13
 ## Fine-tuning process
 Go to "finetune" folder
 ```
