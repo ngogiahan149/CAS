@@ -9,7 +9,7 @@ Table of Contents
 # Dataset
 * Training datasets are available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
 # YML Files
-We provide YML files for conda environment of different tasks:
+We also provide YML files for conda environment of different tasks:
 * Biomedical Relation Extraction: biore.yml
 * Code Completion Fine-Tuning: code-finetune.yml
 * Code Completion and Mathematics Evaluation: code-evaluate.yml
