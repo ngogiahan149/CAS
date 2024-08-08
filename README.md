@@ -8,11 +8,10 @@ Table of Contents
 * [OpenChat](#openchat)
 # Dataset
 * Training datasets are available at [hugging face](https://huggingface.co/datasets/ngogiahan/CAS).
-* Download datasets and put them in the folder "dataset/" before running the script below
 # Biomedical Relation Extraction
 > Python 3.9
-
-For already fine-tuned models:
+\\Download datasets and put them in the folder "dataset/" before running the script below
+\\For already fine-tuned models:
 * [RE model](https://huggingface.co/ngogiahan/model_all)
 * [Novelty model](https://huggingface.co/ngogiahan/model_no_novel) (predict no/novel)
 * [Novelty model](https://huggingface.co/ngogiahan/model_no_none_novel) (predict no/none/novel for novelty, for those "none" prediction in Novelty, also updating "None“ for relation)
@@ -36,6 +35,7 @@ Details performance in the result/result_leaderboard.txt file is calculated by t
 :warning: **Please ensure your CUDA version matching**: Be very careful here!
 
 > Python 3.10.13
+\\Download "evolinstruct_aug.json" and put in "finetune/"
 ## Fine-tuning process
 Go to "finetune" folder
 ```
