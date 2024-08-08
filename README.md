@@ -33,6 +33,7 @@ python script.py evaluate --eval_file dataset/bc8_biored_task1_test.csv --path_r
 ```
 Details performance in the result/result_leaderboard.txt file is calculated by the Leaderboard of BioCreative VIII BioRED Track Subtask 1 Challenge
 # Code Completion 
+> :warning: **Please ensure your CUDA version matching**: Be very careful here!
 > Python 3.10.13
 ## Fine-tuning process
 Go to "finetune" folder
@@ -170,10 +171,14 @@ bash pal-gsm8k.sh
 # Information Retrieval
 > Python 3.10.14
 
-For already fine-tuned models, find them in [hugging face](https://huggingface.co/ngogiahan/gpt2/tree/main). We provide three models:
+For already fine-tuned models, find them in [hugging face](https://huggingface.co/ngogiahan/ir-models/tree/main). We provide three models:
 * Llama2-7B
 * GPT-2
 * GPT-J
+\\ To download models quickly from hugging face, run:
+```
+from huggingface_hub import hf_hub_download repo_id = "ngogiahan/ir-models" directory_name = "gpt2" hf_hub_download(repo_id=repo_id, filename=directory_name) 
+```
 ## LoRA fine-tuning the models
 Dataset
 * train_em_top1.jsonl: original data
