@@ -35,7 +35,7 @@ Details performance in the result/result_leaderboard.txt file is calculated by t
 # Code Completion 
 :warning: **Please ensure your CUDA version matching**: Be very careful here!
 
-\\> Python 3.10.13
+> Python 3.10.13
 ## Fine-tuning process
 Go to "finetune" folder
 ```
