@@ -182,7 +182,7 @@ For already fine-tuned models, find them in [hugging face](https://huggingface.c
 
 To download models quickly from hugging face, run:
 ```
-python download_hf_folder.py --repo_id ngogiahan/ir-models --folder_path <MODEL_NAME> --local_dir ./
+python download_hf_folder.py --repo_id ngogiahan/ir-models --folder_path "<MODEL_NAME>" --local_dir ./saved_model_xturing
 ```
 MODEL_NAME = [gpt2, gpt2_aug(1), gptj, gptj_aug(1), llama2, llama2_aug(1)]
 ## LoRA fine-tuning the models
